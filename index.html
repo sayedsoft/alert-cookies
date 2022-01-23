@@ -1,6 +1,6 @@
 <div class="alert  showAlert text-center cookiealert" role="alert">
     <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website.
-    <button type="button"  class="btn btn-orange-red btn-sm acceptcookies">
+    <button type="button" onclick="saveCookies()" class="btn btn-orange-red btn-sm acceptcookies">
     I agree
     </button>
 </div>
@@ -25,4 +25,5 @@
 <script>
     var cookiesIsAccepted = localStorage.getItem('cookiesIsAccepted')
     if (cookiesIsAccepted == null) { $('.showAlert').show() }
+    function saveCookies() { localStorage.setItem('cookiesIsAccepted',true) }
 </script>
